@@ -7,8 +7,8 @@ class RestaurantSource {
     return responseJson;
   }
 
-  static async restaurantDetail(keyword) {
-    const restaurant = await fetch(API_ENDPOINT.DETAIL(keyword));
+  static async restaurantDetail(id) {
+    const restaurant = await fetch(API_ENDPOINT.DETAIL(id));
     return restaurant.json();
   }
 
@@ -17,7 +17,7 @@ class RestaurantSource {
     return restaurant.json();
   }
 
-  static async reviewRestaurant({ id, name, review }) {
+  static async addRestaurantReview({ id, name, review }) {
     fetch(API_ENDPOINT.REVIEW(), {
       method: 'POST',
       headers: {
