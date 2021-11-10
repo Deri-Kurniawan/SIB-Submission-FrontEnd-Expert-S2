@@ -6,7 +6,7 @@ const API_ENDPOINT = {
   LIST: `${BASE_URL}list`,
   DETAIL: (id) => `${BASE_URL}${id}`,
   SEARCH: (keyword) => `${BASE_URL}search?q=${keyword}`,
-  REVIEW: `${BASE_URL}review`,
+  ADD_REVIEW: `${BASE_URL}review`,
   IMAGE_SMALL: (pictureId) => `${BASE_IMAGE_URL}small/${pictureId}`,
   IMAGE_MEDIUM: (pictureId) => `${BASE_IMAGE_URL}medium/${pictureId}`,
   IMAGE_LARGE: (pictureId) => `${BASE_IMAGE_URL}large/${pictureId}`,
