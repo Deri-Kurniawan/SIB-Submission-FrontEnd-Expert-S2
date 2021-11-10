@@ -1,14 +1,15 @@
-import dataJSON from '../../DATA.json';
+import RestaurantSource from '../../data/restaurant-source';
+import API_ENDPOINT from '../../globals/api-endpoint';
 
-const main = () => {
-  const { restaurants } = JSON.parse(JSON.stringify(dataJSON));
+const main = async () => {
+  const { restaurants } = await RestaurantSource.restaurantList();
 
   const restaurantElement = document.querySelector('.restaurant-list');
 
   restaurants.forEach((restaurant) => {
     restaurantElement.innerHTML += `
       <div class="restaurant-item card" data-id="${restaurant.id}" tabindex="0">
-          <img class="card-image" src="${restaurant.pictureId}" alt="${restaurant.name} restaurant image."/>
+          <img class="card-image" src="${API_ENDPOINT.IMAGE_LARGE(restaurant.pictureId)}" alt="${restaurant.name} restaurant image."/>
           <div class="card-body">
               <div class="icons">
                   <span aria-label="Rating ${restaurant.rating}."><i class="rating-icon fas fa-star fa-fw"></i> ${restaurant.rating}</span>
