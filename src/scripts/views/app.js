@@ -4,10 +4,9 @@ import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
   constructor({
-    button, icon, drawer, content,
+    button, drawer, content,
   }) {
     this._button = button;
-    this._icon = icon;
     this._drawer = drawer;
     this._content = content;
 
@@ -17,7 +16,6 @@ class App {
   async _initialAppShell() {
     DrawerInitiator.init({
       button: this._button,
-      icon: this._icon,
       drawer: this._drawer,
       content: this._content,
     });

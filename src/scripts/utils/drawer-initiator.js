@@ -1,17 +1,16 @@
 const DrawerInitiator = {
   init({
     button,
-    icon,
     drawer,
     content,
   }) {
     button.addEventListener('click', (event) => {
-      this._iconChanger(event, icon);
+      this._iconChanger();
       this._toggleDrawer(event, drawer);
     });
 
     content.addEventListener('click', (event) => {
-      this._iconChanger(event, icon);
+      this._iconChanger();
       this._closeDrawer(event, drawer);
     });
   },
@@ -26,11 +25,13 @@ const DrawerInitiator = {
     drawer.classList.remove('menu-open');
   },
 
-  _iconChanger(event, icon) {
-    event.stopPropagation();
-    const replacedStatus = icon.classList.replace('fa-bars', 'fa-times');
-    if (!replacedStatus) {
-      icon.classList.replace('fa-times', 'fa-bars');
+  _iconChanger() {
+    const menuToggleIconElement = document.querySelector('#menu-toggle .icon');
+
+    const replaced = menuToggleIconElement.classList.replace('fa-bars', 'fa-times');
+
+    if (!replaced) {
+      menuToggleIconElement.classList.replace('fa-times', 'fa-bars');
     }
   },
 };
