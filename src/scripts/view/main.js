@@ -15,7 +15,9 @@ const main = async () => {
                   <span aria-label="Rating ${restaurant.rating}."><i class="rating-icon fas fa-star fa-fw"></i> ${restaurant.rating}</span>
                   <span aria-label="Location at ${restaurant.city} City."><i class="location-icon fas fa-map-marker-alt fa-fw"></i> ${restaurant.city}</span>
               </div>
-              <h3 class="card-title" aria-label="${restaurant.name} Restaurant.">${restaurant.name}</h3>
+              <h3 class="card-title" aria-label="${restaurant.name} Restaurant.">
+                <a class="card-link" href="#/detail/$${restaurant.id}" tabindex="0">${restaurant.name}</a>
+              </h3>
               <p class="card-description" aria-label="${restaurant.name} restaurant description. ${restaurant.description}">${restaurant.description}</p>
           </div>
       </div>
