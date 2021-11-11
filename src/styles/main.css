@@ -124,7 +124,8 @@ header .brand-logo {
   Restaurant List
 */
 
-.restaurant-list {
+.restaurant-list,
+.restaurant-favorite {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
@@ -190,30 +191,8 @@ header .brand-logo {
 }
 
 /*
-  Restaurant Customer Review
+  Restaurant Card Detail
 */
-
-.customer-reviews {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
-  padding: 1.2em;
-  margin: 1.2em 0;
-}
-
-.customer-reviews .customer-review-item {
-  padding: 1.2em;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  box-shadow: 1px 2px 5px rgb(174, 173, 173);
-  -o-border-radius: 15px;
-}
-
-.customer-reviews .customer-review-item span {
-  font-weight: bold;
-}
 
 .card-detail {
   margin: 1em;
@@ -230,7 +209,7 @@ header .brand-logo {
   display: block;
   margin: auto;
   margin-bottom: 2em;
-  width: 95%;
+  width: 80%;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -262,12 +241,47 @@ header .brand-logo {
 
 .drink-item {
   background: black;
+}
+
+.drink-item a {
+  text-decoration: none;
   color: white;
 }
 
+
 .food-item {
   background: white;
+}
+
+.food-item a {
+  text-decoration: none;
   color: black;
+}
+
+/*
+  Restaurant Customer Review
+*/
+
+.customer-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1.2em;
+  margin: 1.2em 0;
+}
+
+.customer-reviews .customer-review-item {
+  padding: 1.2em;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  box-shadow: 1px 2px 5px rgb(174, 173, 173);
+  -o-border-radius: 15px;
+}
+
+.customer-reviews .customer-review-item span {
+  font-weight: bold;
 }
 
 /*
@@ -285,18 +299,4 @@ footer {
 
 .menu-open {
   display: initial !important;
-}
-
-/*
-  Restrictor
-*/
-
-.brand-logo,
-.hero,
-.section-title,
-.icons,
-.card-description,
-footer {
-  user-select: none;
-  cursor: default;
 }
