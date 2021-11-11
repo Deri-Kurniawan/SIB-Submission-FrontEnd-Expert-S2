@@ -10,7 +10,7 @@ const createRestaurantItemTemplate = (restaurant) => `
             <span aria-label="Location at ${restaurant.city} City."><i class="location-icon fas fa-map-marker-alt fa-fw"></i> ${restaurant.city}</span>
         </div>
         <h3 class="card-title" aria-label="${restaurant.name} Restaurant.">
-          <a class="card-link" href="/#/detail/${restaurant.id}" tabindex="0">${restaurant.name}</a>
+          <a class="card-link" href="/#/detail/${restaurant.id}" aria-label="See detail about ${restaurant.name} restaurant." tabindex="0">${restaurant.name}</a>
         </h3>
         <p class="card-description" aria-label="${restaurant.name} restaurant description. ${restaurant.description}">${restaurant.description}</p>
     </div>
@@ -19,15 +19,15 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="card-detail">
-    <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
+    <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}" aria-label="${restaurant.name} restaurant image." tabindex="0"/>
 
     <table>
-      <tr>
+      <tr tabindex="0">
         <th>Name</th>
         <td>:</td>
         <td>${restaurant.name}</td>
       </tr>
-      <tr>
+      <tr tabindex="0">
         <th>Address</th>
         <td>:</td>
         <td>
@@ -35,7 +35,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
           ${restaurant.address}
         </td>
       </tr>
-      <tr>
+      <tr tabindex="0">
         <th>City</th>
         <td>:</td>
         <td>
@@ -43,17 +43,17 @@ const createRestaurantDetailTemplate = (restaurant) => `
           ${restaurant.city}
         </td>
       </tr>
-      <tr>
+      <tr tabindex="0">
         <th>Description</th>
         <td>:</td>
         <td>${restaurant.description}</td>
       </tr>
-      <tr>
+      <tr tabindex="0">
         <th>Drinks</th>
         <td>:</td>
         <td>${DetailHelper.eachDrinksMenu(restaurant.menus)}</td>
       </tr>
-      <tr>
+      <tr tabindex="0">
         <th>Foods</th>
         <td>:</td>
         <td>${DetailHelper.eachFoodsMenu(restaurant.menus)}</td>
@@ -61,13 +61,27 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </table>
   </div>
 
-  <h4 class="section-title">Customer Reviews</h4>
-  <div class="customer-reviews">
+  <h3 class="section-title" tabindex="0">Customer Reviews</h3>
+  <div class="customer-reviews" tabindex="0">
     ${DetailHelper.eachCustomersReview(restaurant)}
   </div>
+`;
+
+const createFavoriteButtonTemplate = () => `
+  <button aria-label="mark this restaurant as favorite" id="favoriteButton" class="favorite-button">
+     <i class="far fa-star fa-fw" aria-hidden="true"></i>
+  </button>
+`;
+
+const createFavoritedButtonTemplate = () => `
+  <button aria-label="remove this restaurant as not favorite" id="favoriteButton" class="favorite-button">
+    <i class="fas fa-star fa-fw" aria-hidden="true"></i>
+  </button>
 `;
 
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
+  createFavoriteButtonTemplate,
+  createFavoritedButtonTemplate,
 };
