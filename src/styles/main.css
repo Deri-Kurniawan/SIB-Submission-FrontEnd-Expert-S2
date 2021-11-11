@@ -176,7 +176,7 @@ header .brand-logo {
 }
 
 .city-icon {
-  color: rgb(199, 23, 23);
+  color: rgb(237, 71, 71);
 }
 
 .card-link {
@@ -193,8 +193,15 @@ header .brand-logo {
   Restaurant Customer Review
 */
 
-.customer-reviews .customer-review {
-  margin: 1.2em;
+.customer-reviews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  padding: 1.2em;
+  margin: 1.2em 0;
+}
+
+.customer-reviews .customer-item {
   padding: 1.2em;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -204,7 +211,7 @@ header .brand-logo {
   -o-border-radius: 15px;
 }
 
-.customer-reviews .customer-review span {
+.customer-reviews .customer-item span {
   font-weight: bold;
 }
 
@@ -249,6 +256,16 @@ header .brand-logo {
   -moz-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
+}
+
+.drink-item {
+  background: black;
+  color: white;
+}
+
+.food-item {
+  background: white;
+  color: black;
 }
 
 /*
