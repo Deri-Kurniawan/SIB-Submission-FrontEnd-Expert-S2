@@ -227,8 +227,10 @@ header .brand-logo {
 }
 
 .card-detail-image {
+  display: block;
+  margin: auto;
   margin-bottom: 2em;
-  width: 100%;
+  width: 95%;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
