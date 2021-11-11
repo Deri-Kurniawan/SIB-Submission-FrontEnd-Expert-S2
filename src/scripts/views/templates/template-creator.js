@@ -68,14 +68,14 @@ const createRestaurantDetailTemplate = (restaurant) => `
 `;
 
 const createFavoriteButtonTemplate = () => `
-  <button aria-label="like this movie" id="favoriteButton" class="favorite">
-     <i class="far fa-heart" aria-hidden="true"></i>
+  <button aria-label="mark this restaurant as favorite" id="favoriteButton" class="favorite-button">
+     <i class="far fa-star fa-fw" aria-hidden="true"></i>
   </button>
 `;
 
 const createFavoritedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="favoriteButton" class="favorite">
-    <i class="fas fa-heart" aria-hidden="true"></i>
+  <button aria-label="remove this restaurant as not favorite" id="favoriteButton" class="favorite-button">
+    <i class="fas fa-star fa-fw" aria-hidden="true"></i>
   </button>
 `;
 

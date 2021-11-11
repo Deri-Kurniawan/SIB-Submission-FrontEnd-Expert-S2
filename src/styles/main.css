@@ -305,17 +305,17 @@ footer {
    Like
 */
 
-.favorite {
-  font-size: 18px;
+.favorite-button {
+  font-size: 2em;
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: #db0000;
+  background-color: rgb(255, 25, 0);
   color: white;
   border: 0;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 2em;
+  height: 2em;
   cursor: pointer;
   display: flex;
   align-items: center;
