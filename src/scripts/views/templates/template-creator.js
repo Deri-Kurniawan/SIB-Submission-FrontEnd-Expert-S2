@@ -19,7 +19,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="card-detail">
-  <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
+    <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
 
     <table>
       <tr>
