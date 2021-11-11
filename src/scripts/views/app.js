@@ -3,9 +3,7 @@ import routes from '../routes/routes';
 import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
-  constructor({
-    button, drawer, content,
-  }) {
+  constructor({ button, drawer, content }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
