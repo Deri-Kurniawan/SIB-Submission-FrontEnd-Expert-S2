@@ -201,7 +201,7 @@ header .brand-logo {
   margin: 1.2em 0;
 }
 
-.customer-reviews .customer-item {
+.customer-reviews .customer-review-item {
   padding: 1.2em;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -211,7 +211,7 @@ header .brand-logo {
   -o-border-radius: 15px;
 }
 
-.customer-reviews .customer-item span {
+.customer-reviews .customer-review-item span {
   font-weight: bold;
 }
 
