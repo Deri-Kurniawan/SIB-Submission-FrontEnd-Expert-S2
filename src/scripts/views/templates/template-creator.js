@@ -1,4 +1,5 @@
 import API_ENDPOINT from '../../globals/api-endpoint';
+import DetailHelper from '../../utils/detail-helper';
 
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="restaurant-item card" data-id="${restaurant.id}" tabindex="0">
@@ -16,4 +17,57 @@ const createRestaurantItemTemplate = (restaurant) => `
 </div>
 `;
 
-export default createRestaurantItemTemplate;
+const createRestaurantDetailTemplate = (restaurant) => `
+  <div class="card-detail">
+  <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
+
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td>${restaurant.name}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>:</td>
+        <td>
+          <i class="location-icon fas fa-map-marker-alt fa-fw"></i>
+          ${restaurant.address}
+        </td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td>:</td>
+        <td>
+          <i class="city-icon fas fa-city fa-fw"></i>
+          ${restaurant.city}
+        </td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>:</td>
+        <td>${restaurant.description}</td>
+      </tr>
+      <tr>
+        <td>Drinks</td>
+        <td>:</td>
+        <td>${DetailHelper.eachDrinksMenu(restaurant.menus)}</td>
+      </tr>
+      <tr>
+        <td>Foods</td>
+        <td>:</td>
+        <td>${DetailHelper.eachFoodsMenu(restaurant.menus)}</td>
+      </tr>
+    </table>
+  </div>
+
+  <h4 class="section-title">Customer Reviews</h4>
+  <div class="customer-reviews">
+    ${DetailHelper.eachCustomersReview(restaurant)}
+  </div>
+`;
+
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+};
