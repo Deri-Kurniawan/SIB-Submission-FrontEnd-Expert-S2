@@ -1,5 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
-import createRestaurantItemTemplate from '../templates/template-creator';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const List = {
   async render() {
@@ -11,10 +11,13 @@ const List = {
   async afterRender() {
     const { restaurants } = await RestaurantSource.restaurantList();
     const restaurantElement = document.querySelector('.restaurant-list');
+    const pageTitleElement = document.querySelector('#pageTitle');
 
     restaurants.forEach((restaurant) => {
       restaurantElement.innerHTML += createRestaurantItemTemplate(restaurant);
     });
+
+    pageTitleElement.innerHTML = 'Explore Restaurant';
   },
 };
 
