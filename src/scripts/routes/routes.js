@@ -1,11 +1,9 @@
 import List from '../views/pages/list';
+import Detail from '../views/pages/detail';
 
 const routes = {
-  '/': List, // default page
-  // '/now-playing': NowPlaying,
-  // '/upcoming': Upcoming,
-  // '/detail/:id': Detail,
-  // '/like': Like,
+  '/': List,
+  '/detail/:id': Detail,
 };
 
 export default routes;
