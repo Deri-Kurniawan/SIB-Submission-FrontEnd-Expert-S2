@@ -47,13 +47,17 @@
 */
 
 @media screen and (min-width: 780px) {
-  .restaurant-list {
+
+  .restaurant-list,
+  .restaurant-favorite {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .restaurant-list {
+
+  .restaurant-list,
+  .restaurant-favorite {
     grid-template-columns: repeat(3, 1fr);
   }
 }
