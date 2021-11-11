@@ -19,16 +19,16 @@ const createRestaurantItemTemplate = (restaurant) => `
 
 const createRestaurantDetailTemplate = (restaurant) => `
   <div class="card-detail">
-  <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
+    <img class="card-detail-image" src="${API_ENDPOINT.IMAGE_MEDIUM(restaurant.pictureId)}"/>
 
     <table>
       <tr>
-        <td>Name</td>
+        <th>Name</th>
         <td>:</td>
         <td>${restaurant.name}</td>
       </tr>
       <tr>
-        <td>Address</td>
+        <th>Address</th>
         <td>:</td>
         <td>
           <i class="location-icon fas fa-map-marker-alt fa-fw"></i>
@@ -36,7 +36,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </td>
       </tr>
       <tr>
-        <td>City</td>
+        <th>City</th>
         <td>:</td>
         <td>
           <i class="city-icon fas fa-city fa-fw"></i>
@@ -44,17 +44,17 @@ const createRestaurantDetailTemplate = (restaurant) => `
         </td>
       </tr>
       <tr>
-        <td>Description</td>
+        <th>Description</th>
         <td>:</td>
         <td>${restaurant.description}</td>
       </tr>
       <tr>
-        <td>Drinks</td>
+        <th>Drinks</th>
         <td>:</td>
         <td>${DetailHelper.eachDrinksMenu(restaurant.menus)}</td>
       </tr>
       <tr>
-        <td>Foods</td>
+        <th>Foods</th>
         <td>:</td>
         <td>${DetailHelper.eachFoodsMenu(restaurant.menus)}</td>
       </tr>

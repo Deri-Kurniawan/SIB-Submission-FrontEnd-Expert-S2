@@ -18,7 +18,7 @@ const DetailHelper = {
     let customerReviewsString = '';
     customerReviews.forEach((customerReview) => {
       customerReviewsString += `
-        <div class="customer-review">
+        <div class="customer-review-item">
           <span>${customerReview.name}</span> - ${customerReview.date}
           <p>${customerReview.review}</p>
         </div>`;
