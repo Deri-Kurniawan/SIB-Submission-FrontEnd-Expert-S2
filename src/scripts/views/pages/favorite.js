@@ -1,4 +1,4 @@
-import RestaurantSource from '../../data/restaurant-source';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Favorite = {
@@ -9,7 +9,7 @@ const Favorite = {
   },
 
   async afterRender() {
-    const { restaurants } = await RestaurantSource.restaurantList();
+    const restaurants = await FavoriteRestaurantIdb.getRestaurants();
     const restaurantFavoriteElement = document.querySelector('.restaurant-favorite');
     const pageTitleElement = document.querySelector('#pageTitle');
 
