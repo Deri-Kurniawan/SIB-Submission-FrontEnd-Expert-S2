@@ -2,7 +2,10 @@ const DetailHelper = {
   eachFoodsMenu({ foods }) {
     let foodsString = '';
     foods.forEach((food) => {
-      foodsString += `<span class="food-item">${food.name}</span>`;
+      foodsString += `
+      <span class="food-item">
+        <a href="https://google.com/search?q=Makanan ${food.name} adalah" target="_blank" rel=”noreferrer” title="Apa itu Makanan ${food.name}?">${food.name}</a>
+      </span>`;
     });
     return foodsString;
   },
@@ -10,7 +13,10 @@ const DetailHelper = {
   eachDrinksMenu({ drinks }) {
     let drinksString = '';
     drinks.forEach((drink) => {
-      drinksString += `<span class="drink-item">${drink.name}</span>`;
+      drinksString += `
+      <span class="drink-item">
+        <a href="https://google.com/search?q=Minuman ${drink.name} adalah" target="_blank" rel=”noreferrer” title="Apa itu Minuman ${drink.name}?">${drink.name}</a>
+      </span>`;
     });
     return drinksString;
   },
