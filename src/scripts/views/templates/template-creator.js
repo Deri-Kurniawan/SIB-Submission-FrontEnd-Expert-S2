@@ -79,19 +79,38 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
-const createRestaurantFormReview = () => `
-  <h3 class="section-title">Add Review</h3>
+const createCustomerReviewTemplate = (customerReview) => `
+  <div class="customer-review-item">
+    <span tabindex="0" aria-label="${customerReview.name} memberikan review pada ${customerReview.date}.">${customerReview.name} - ${customerReview.date}</span>
+    <p tabindex="0" aria-label="pesan reviewnya adalah ${customerReview.review}.">${customerReview.review}</p>
+  </div>
+`;
+
+const createRestaurantFormReviewTemplate = () => `
+  <h3 class="section-title" tabindex="0">Add Review</h3>
   <form id="reviewForm">
     <div class="input-group">
       <label for="inputName">Name</label>
-      <input type="text" id="inputName">
+      <input type="text" id="inputName" required>
     </div>
     <div class="input-group">
       <label for="inputReview">Review</label>
-      <textarea id="inputReview"></textarea>
+      <textarea id="inputReview" required></textarea>
     </div>
     <button type="submit" id="postReviewButton">Post Review</button>
   </form>
+`;
+
+const createDrinkItemTemplate = (drink) => `
+  <span class="drink-item">
+    <a href="https://google.com/search?q=Minuman ${drink.name} adalah" target="_blank" rel=”noreferrer” aria-label="${drink.name}." title="Apa itu Minuman ${drink.name}?">${drink.name}</a>
+  </span>
+`;
+
+const createFoodItemTemplate = (food) => `
+  <span class="food-item">
+    <a href="https://google.com/search?q=Makanan ${food.name} adalah" target="_blank" rel=”noreferrer” aria-label="${food.name}." title="Apa itu Makanan ${food.name}?">${food.name}</a>
+  </span>
 `;
 
 export {
@@ -99,5 +118,8 @@ export {
   createRestaurantDetailTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
-  createRestaurantFormReview,
+  createCustomerReviewTemplate,
+  createRestaurantFormReviewTemplate,
+  createDrinkItemTemplate,
+  createFoodItemTemplate,
 };
