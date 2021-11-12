@@ -37,10 +37,10 @@ const CustomerReviewInitiator = {
   },
 
   async _makeRequest({ id, name, review }) {
-    const responseJSON = RestaurantSource.addCustomerReview({ id, name, review });
+    const responseJSON = await RestaurantSource.addCustomerReview({ id, name, review });
     const date = new Date();
 
-    if (!responseJSON.error) {
+    if (await responseJSON.error === false) {
       this._customerReviewContainer.innerHTML += createCustomerReviewTemplate({
         id,
         name,
@@ -52,7 +52,7 @@ const CustomerReviewInitiator = {
 
       alert('Review has been successfuly added!');
     } else {
-      alert('Failed to add review!\nPlease try again!');
+      alert(await responseJSON.message);
     }
   },
 };
