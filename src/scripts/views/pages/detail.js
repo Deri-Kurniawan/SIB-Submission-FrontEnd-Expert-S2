@@ -2,11 +2,13 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
+import CustomerReviewInitiator from '../../utils/customer-review-initiator';
 
 const Detail = {
   async render() {
     return `
     <div class="restaurant-detail"></div>
+    <div id="customerReviewContainer"></div>
     <div id="favoriteButtonContainer"></div>
     `;
   },
@@ -22,6 +24,11 @@ const Detail = {
     FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
       restaurant,
+    });
+
+    CustomerReviewInitiator.init({
+      customerReviewContainer: document.querySelector('.customer-reviews'),
+      customerFormReviewContainer: document.querySelector('#customerReviewContainer'),
     });
   },
 };

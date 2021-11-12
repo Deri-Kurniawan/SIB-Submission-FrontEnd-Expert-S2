@@ -51,6 +51,7 @@ header .brand-logo {
   top: 22px;
   right: 10px;
   font-size: 3em;
+  cursor: pointer;
 }
 
 /*
@@ -271,17 +272,25 @@ header .brand-logo {
 }
 
 .customer-reviews .customer-review-item {
+  box-shadow: 1px 2px 5px rgb(174, 173, 173);
   padding: 1.2em;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
-  box-shadow: 1px 2px 5px rgb(174, 173, 173);
   -o-border-radius: 15px;
 }
 
 .customer-reviews .customer-review-item span {
   font-weight: bold;
+}
+
+.customer-reviews .customer-review-item:hover {
+  transform: scale(1.03, 1.03);
+  -webkit-transform: scale(1.03, 1.03);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -o-transform: scale(1.03, 1.03);
 }
 
 /*
@@ -320,4 +329,66 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+}
+
+.input-group {
+  margin-bottom: .5em;
+}
+
+.input-group>input,
+.input-group>textarea {
+  margin-top: 4px;
+  width: 100%;
+}
+
+#inputName {
+  height: 3em;
+  font-size: 1em;
+}
+
+#inputReview {
+  font-size: 1.2em;
+  height: 6em;
+}
+
+#postReviewButton {
+  height: 3em;
+  margin-bottom: 6em;
+  background: #fff;
+  border: 1px solid rgb(67, 67, 255);
+  color: #000;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  cursor: pointer;
+  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+}
+
+#postReviewButton:hover,
+#postReviewButton:focus {
+  background: rgb(92, 92, 220);
+  color: #fff;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  border: 1px solid #fff;
+}
+
+#postReviewButton:active {
+  background: rgb(0, 0, 255);
+  color: #fff;
 }
