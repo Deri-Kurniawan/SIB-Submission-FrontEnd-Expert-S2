@@ -285,6 +285,14 @@ header .brand-logo {
   font-weight: bold;
 }
 
+.customer-reviews .customer-review-item:hover {
+  transform: scale(1.03, 1.03);
+  -webkit-transform: scale(1.03, 1.03);
+  -moz-transform: scale(1.03, 1.03);
+  -ms-transform: scale(1.03, 1.03);
+  -o-transform: scale(1.03, 1.03);
+}
+
 /*
   Footer
 */
@@ -337,6 +345,11 @@ footer {
 .input-group>textarea {
   margin-top: 4px;
   width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 #inputName {
@@ -351,7 +364,7 @@ footer {
 
 #postReviewButton {
   height: 3em;
-  margin-bottom: 1em;
+  margin-bottom: 6em;
   background: #fff;
   border: 1px solid rgb(67, 67, 255);
   color: #000;
