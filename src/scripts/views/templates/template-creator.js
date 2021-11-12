@@ -79,7 +79,7 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
-const createFavoriteRestaurantFormReview = () => `
+const createRestaurantFormReview = () => `
   <h3 class="section-title">Add Review</h3>
   <form id="reviewForm">
     <div class="input-group">
@@ -99,5 +99,5 @@ export {
   createRestaurantDetailTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
-  createFavoriteRestaurantFormReview,
+  createRestaurantFormReview,
 };
