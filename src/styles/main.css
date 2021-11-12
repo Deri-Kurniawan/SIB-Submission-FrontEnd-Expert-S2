@@ -272,12 +272,12 @@ header .brand-logo {
 }
 
 .customer-reviews .customer-review-item {
+  box-shadow: 1px 2px 5px rgb(174, 173, 173);
   padding: 1.2em;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
-  box-shadow: 1px 2px 5px rgb(174, 173, 173);
   -o-border-radius: 15px;
 }
 
@@ -345,11 +345,6 @@ footer {
 .input-group>textarea {
   margin-top: 4px;
   width: 100%;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
 }
 
 #inputName {
