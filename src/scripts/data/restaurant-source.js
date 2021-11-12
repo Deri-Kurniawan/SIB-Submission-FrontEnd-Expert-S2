@@ -43,7 +43,7 @@ class RestaurantSource {
       const responseText = await fetch(API_ENDPOINT.ADD_REVIEW, options);
       return responseText.json();
     } catch (error) {
-      return { error: true, message: `${error.message}!\nPlease check your internet connection!` };
+      return { error: true, message: `${error.message}! Review not successfully added!\nPlease check your internet connection!` };
     }
   }
 
