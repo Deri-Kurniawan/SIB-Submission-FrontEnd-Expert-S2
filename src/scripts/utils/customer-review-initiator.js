@@ -2,14 +2,14 @@ import API_ENDPOINT from '../globals/api-endpoint';
 import UrlParser from '../routes/url-parser';
 import { createRestaurantFormReviewTemplate } from '../views/templates/template-creator';
 
-const RestaurantReviewInitiator = {
-  init({ restaurantReviewContainer }) {
-    this._restaurantReviewContainer = restaurantReviewContainer;
+const CustomerReviewInitiator = {
+  init({ customerReviewContainer }) {
+    this._customerReviewContainer = customerReviewContainer;
     this._renderForm();
   },
 
   _renderForm() {
-    this._restaurantReviewContainer.innerHTML = createRestaurantFormReviewTemplate();
+    this._customerReviewContainer.innerHTML = createRestaurantFormReviewTemplate();
     const reviewFormElement = document.querySelector('#reviewForm');
     reviewFormElement.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -44,4 +44,4 @@ const RestaurantReviewInitiator = {
   },
 };
 
-export default RestaurantReviewInitiator;
+export default CustomerReviewInitiator;
