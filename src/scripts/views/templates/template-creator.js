@@ -79,9 +79,25 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `;
 
+const createFavoriteRestaurantFormReview = () => `
+  <h3 class="section-title">Add Review</h3>
+  <form id="reviewForm" action="/review" method="post">
+    <div class="input-group">
+      <label for="inputName">Name</label>
+      <input type="text" id="inputName">
+    </div>
+    <div class="input-group">
+      <label for="inputReview">Review</label>
+      <textarea id="inputReview"></textarea>
+    </div>
+    <button type="submit" id="postReviewButton">Post Review</button>
+  </form>
+`;
+
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createFavoriteButtonTemplate,
   createFavoritedButtonTemplate,
+  createFavoriteRestaurantFormReview,
 };
