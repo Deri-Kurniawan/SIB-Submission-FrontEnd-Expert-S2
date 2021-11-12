@@ -17,14 +17,19 @@ class RestaurantSource {
     return restaurant.json();
   }
 
-  static async addRestaurantReview({ id, name, review }) {
-    fetch(API_ENDPOINT.REVIEW(), {
+  static async addCustomerReview({ id, name, review }) {
+    const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id, name, review }),
-    });
+      body: JSON.stringify({
+        id, name, review,
+      }),
+    };
+
+    const responseText = await fetch(API_ENDPOINT.ADD_REVIEW, options);
+    return responseText.json();
   }
 }
 

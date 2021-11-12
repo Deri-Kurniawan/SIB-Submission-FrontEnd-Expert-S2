@@ -1,4 +1,4 @@
-import API_ENDPOINT from '../globals/api-endpoint';
+import RestaurantSource from '../data/restaurant-source';
 import UrlParser from '../routes/url-parser';
 import { createCustomerReviewTemplate, createRestaurantFormReviewTemplate } from '../views/templates/template-creator';
 import DateHelper from './date-helper';
@@ -37,21 +37,10 @@ const CustomerReviewInitiator = {
   },
 
   async _makeRequest({ id, name, review }) {
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        id, name, review,
-      }),
-    };
-
-    const responseText = await fetch(API_ENDPOINT.ADD_REVIEW, options);
-    const responseJson = await responseText.json();
+    const responseJSON = RestaurantSource.addCustomerReview();
     const date = new Date();
 
-    if (!responseJson.error) {
+    if (!responseJSON.error) {
       this._customerReviewContainer.innerHTML += createCustomerReviewTemplate({
         id,
         name,
