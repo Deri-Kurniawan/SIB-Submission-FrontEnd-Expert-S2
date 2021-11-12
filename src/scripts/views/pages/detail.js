@@ -27,7 +27,8 @@ const Detail = {
     });
 
     CustomerReviewInitiator.init({
-      customerReviewContainer: document.querySelector('#customerReviewContainer'),
+      customerReviewContainer: document.querySelector('.customer-reviews'),
+      customerFormReviewContainer: document.querySelector('#customerReviewContainer'),
     });
   },
 };
