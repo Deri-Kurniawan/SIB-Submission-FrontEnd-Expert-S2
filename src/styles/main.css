@@ -51,6 +51,7 @@ header .brand-logo {
   top: 22px;
   right: 10px;
   font-size: 3em;
+  cursor: pointer;
 }
 
 /*
