@@ -10,19 +10,20 @@ const CustomerReviewInitiator = {
 
   _renderForm() {
     this._customerReviewContainer.innerHTML = createRestaurantFormReviewTemplate();
-    const reviewFormElement = document.querySelector('#reviewForm');
-    reviewFormElement.addEventListener('submit', (e) => {
-      e.preventDefault();
-      this._isFormSubmitted(e);
-    });
+    this._isFormSubmitted();
   },
 
   _isFormSubmitted() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const inputName = document.querySelector('#inputName');
-    const inputReview = document.querySelector('#inputReview');
+    const reviewFormElement = document.querySelector('#reviewForm');
+    reviewFormElement.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    this._makeRequest({ id: url.id, name: inputName.value, review: inputReview.value });
+      const url = UrlParser.parseActiveUrlWithoutCombiner();
+      const inputName = document.querySelector('#inputName');
+      const inputReview = document.querySelector('#inputReview');
+
+      this._makeRequest({ id: url.id, name: inputName.value, review: inputReview.value });
+    });
   },
 
   async _makeRequest({ id, name, review }) {
@@ -39,7 +40,9 @@ const CustomerReviewInitiator = {
     const responseText = await fetch(API_ENDPOINT.ADD_REVIEW, options);
     const responseJson = await responseText.json();
     if (!responseJson.error) {
-      alert('Review has been added!');
+      alert('Review has been successfuly added!');
+    } else {
+      alert('Failed to add review!');
     }
   },
 };
