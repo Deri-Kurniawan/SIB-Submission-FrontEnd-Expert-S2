@@ -1,4 +1,4 @@
-import FavoriteRestaurantIdb from '../data/favorite-restaurant';
+import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 import { createFavoriteButtonTemplate, createFavoritedButtonTemplate } from '../views/templates/template-creator';
 
 const FavoriteButtonInitiator = {
