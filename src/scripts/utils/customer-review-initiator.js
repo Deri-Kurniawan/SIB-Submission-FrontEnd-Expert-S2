@@ -17,6 +17,7 @@ const CustomerReviewInitiator = {
 
   _isFormSubmitted() {
     const reviewFormElement = document.querySelector('#reviewForm');
+
     reviewFormElement.addEventListener('submit', (e) => {
       e.preventDefault();
 
@@ -24,7 +25,11 @@ const CustomerReviewInitiator = {
       const inputName = document.querySelector('#inputName');
       const inputReview = document.querySelector('#inputReview');
 
-      this._makeRequest({ id: url.id, name: inputName.value, review: inputReview.value });
+      this._makeRequest({
+        id: url.id,
+        name: inputName.value,
+        review: inputReview.value,
+      });
 
       inputName.value = '';
       inputReview.value = '';
@@ -55,9 +60,10 @@ const CustomerReviewInitiator = {
         ${date.getDay()} ${DateHelper.monthNameChecker(date.getMonth())} ${date.getFullYear()}
         `,
       });
+
       alert('Review has been successfuly added!');
     } else {
-      alert('Failed to add review!');
+      alert('Failed to add review!\nPlease try again!');
     }
   },
 };
