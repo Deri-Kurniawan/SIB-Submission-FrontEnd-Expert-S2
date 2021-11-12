@@ -37,7 +37,7 @@ const CustomerReviewInitiator = {
   },
 
   async _makeRequest({ id, name, review }) {
-    const responseJSON = RestaurantSource.addCustomerReview();
+    const responseJSON = RestaurantSource.addCustomerReview({ id, name, review });
     const date = new Date();
 
     if (!responseJSON.error) {
