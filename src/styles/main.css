@@ -319,9 +319,9 @@ footer {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: rgb(255, 25, 0);
-  color: white;
-  border: 0;
+  background-color: black;
+  color: rgb(255, 25, 0);
+  border: 1px solid white;
   border-radius: 50%;
   width: 2em;
   height: 2em;

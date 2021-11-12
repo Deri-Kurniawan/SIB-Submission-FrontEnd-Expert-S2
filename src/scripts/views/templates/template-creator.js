@@ -2,7 +2,7 @@ import API_ENDPOINT from '../../globals/api-endpoint';
 import DetailHelper from '../../utils/detail-helper';
 
 const createRestaurantItemTemplate = (restaurant) => `
-<div class="restaurant-item card" data-id="${restaurant.id}" tabindex="0">
+<div class="restaurant-item card" tabindex="0">
     <img class="card-image" src="${API_ENDPOINT.IMAGE_LARGE(restaurant.pictureId)}" alt="${restaurant.name} restaurant image."/>
     <div class="card-body">
         <div class="icons">
@@ -68,14 +68,14 @@ const createRestaurantDetailTemplate = (restaurant) => `
 `;
 
 const createFavoriteButtonTemplate = () => `
-  <button aria-label="mark this restaurant as favorite" id="favoriteButton" class="favorite-button">
-     <i class="far fa-star fa-fw" aria-hidden="true"></i>
+  <button aria-label="mark this restaurant as favorite" id="favoriteButton" class="favorite-button" title="mark as favorite">
+     <i class="far fa-heart fa-fw" aria-hidden="true"></i>
   </button>
 `;
 
 const createFavoritedButtonTemplate = () => `
-  <button aria-label="remove this restaurant as not favorite" id="favoriteButton" class="favorite-button">
-    <i class="fas fa-star fa-fw" aria-hidden="true"></i>
+  <button aria-label="remove this restaurant as not favorite" id="favoriteButton" class="favorite-button" title="remove as not favorite">
+    <i class="fas fa-heart fa-fw" aria-hidden="true"></i>
   </button>
 `;
 
