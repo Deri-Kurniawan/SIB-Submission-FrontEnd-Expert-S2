@@ -30,13 +30,12 @@ const CustomerReviewInitiator = {
         name: inputName.value,
         review: inputReview.value,
       });
-
-      inputName.value = '';
-      inputReview.value = '';
     });
   },
 
   async _makeRequest({ id, name, review }) {
+    const inputName = document.querySelector('#inputName');
+    const inputReview = document.querySelector('#inputReview');
     const responseJSON = await RestaurantSource.addCustomerReview({ id, name, review });
     const date = new Date();
 
@@ -49,6 +48,9 @@ const CustomerReviewInitiator = {
         ${date.getDay()} ${DateHelper.monthNameChecker(date.getMonth())} ${date.getFullYear()}
         `,
       });
+
+      inputName.value = '';
+      inputReview.value = '';
 
       alert('Review has been successfuly added!');
     } else {
