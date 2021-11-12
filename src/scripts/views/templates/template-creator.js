@@ -81,7 +81,7 @@ const createFavoritedButtonTemplate = () => `
 
 const createFavoriteRestaurantFormReview = () => `
   <h3 class="section-title">Add Review</h3>
-  <form id="reviewForm" action="/review" method="post">
+  <form id="reviewForm">
     <div class="input-group">
       <label for="inputName">Name</label>
       <input type="text" id="inputName">

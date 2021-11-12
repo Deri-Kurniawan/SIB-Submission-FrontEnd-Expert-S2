@@ -360,9 +360,26 @@ footer {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   cursor: pointer;
+  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
 }
 
-#postReviewButton:hover {
-  background: rgb(95, 95, 250);
+#postReviewButton:hover,
+#postReviewButton:focus {
+  background: rgb(92, 92, 220);
+  color: #fff;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  border: 1px solid #fff;
+}
+
+#postReviewButton:active {
+  background: rgb(0, 0, 255);
   color: #fff;
 }
