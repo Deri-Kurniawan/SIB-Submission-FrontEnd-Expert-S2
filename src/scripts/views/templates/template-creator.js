@@ -80,9 +80,9 @@ const createFavoritedButtonTemplate = () => `
 `;
 
 const createCustomerReviewTemplate = (customerReview) => `
-  <div class="customer-review-item">
-    <span tabindex="0" aria-label="${customerReview.name} memberikan review pada ${customerReview.date}.">${customerReview.name} - ${customerReview.date}</span>
-    <p tabindex="0" aria-label="pesan reviewnya adalah ${customerReview.review}.">${customerReview.review}</p>
+  <div class="customer-review-item" tabindex="0" aria-label="${customerReview.name} memberikan review pada ${customerReview.date}. Dan pesan reviewnya adalah ${customerReview.review}.">
+    <span>${customerReview.name} - ${customerReview.date}</span>
+    <p>${customerReview.review}</p>
   </div>
 `;
 
