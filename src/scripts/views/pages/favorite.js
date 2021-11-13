@@ -13,9 +13,20 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getRestaurants();
     const restaurantFavoriteElement = document.querySelector('.favorite-restaurant');
 
-    restaurants.forEach((restaurant) => {
-      restaurantFavoriteElement.innerHTML += createRestaurantItemTemplate(restaurant);
-    });
+    if (restaurants.length > 0) {
+      restaurants.forEach((restaurant) => {
+        restaurantFavoriteElement.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
+    } else {
+      this._renderError();
+    }
+  },
+
+  _renderError() {
+    const mainContent = document.querySelector('#mainContent');
+    const errorMessage = document.createElement('error-message');
+    errorMessage.message = 'You don\'t have any favorite restaurant!';
+    mainContent.append(errorMessage);
   },
 };
 
