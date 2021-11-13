@@ -10,6 +10,10 @@ const app = new App({
   button: document.querySelector('#menu-toggle'),
   drawer: document.querySelector('.nav-menu'),
   content: document.querySelector('#mainContent'),
+},
+{
+  skipButton: document.querySelector('.skip-link'),
+  skipTarget: document.getElementById('mainContent'),
 });
 
 window.addEventListener('hashchange', () => {
