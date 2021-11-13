@@ -46,7 +46,7 @@
   Restaurant List
 */
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 775px) {
 
   .restaurant-list,
   .restaurant-favorite {
@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
 
   .restaurant-list,
   .restaurant-favorite {

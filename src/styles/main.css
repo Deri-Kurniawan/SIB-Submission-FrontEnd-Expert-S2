@@ -184,6 +184,7 @@ header .brand-logo {
 .card-link {
   text-decoration: none;
   color: #3394e3;
+  font-size: 2.3em;
 }
 
 .card-link:hover,
@@ -350,7 +351,8 @@ footer {
 }
 
 #postReviewButton {
-  height: 3em;
+  font-size: 2em;
+  height: 1.5em;
   margin-bottom: 6em;
   background: #fff;
   border: 1px solid rgb(67, 67, 255);
