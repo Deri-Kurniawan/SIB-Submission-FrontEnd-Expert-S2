@@ -4,6 +4,7 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
+      <h2 class="section-title" tabindex="0" id="pageTitle">Favorite Restaurant</h2>
       <div class="restaurant-favorite"></div>
     `;
   },
@@ -11,13 +12,10 @@ const Favorite = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getRestaurants();
     const restaurantFavoriteElement = document.querySelector('.restaurant-favorite');
-    const pageTitleElement = document.querySelector('#pageTitle');
 
     restaurants.forEach((restaurant) => {
       restaurantFavoriteElement.innerHTML += createRestaurantItemTemplate(restaurant);
     });
-
-    pageTitleElement.innerHTML = 'Favorite Restaurants';
   },
 };
 
