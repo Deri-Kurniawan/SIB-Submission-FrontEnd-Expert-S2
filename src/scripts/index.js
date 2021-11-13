@@ -2,8 +2,12 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '@fortawesome/fontawesome-free/js/all';
 import '../styles/main.css';
 import '../styles/responsive.css';
+
 import './components/app-bar';
+import './components/hero-image';
+import './components/skip-to-content';
 import './components/footer-copyright';
+
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
