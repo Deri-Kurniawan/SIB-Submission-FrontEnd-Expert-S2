@@ -80,9 +80,9 @@ const createFavoritedButtonTemplate = () => `
 `;
 
 const createCustomerReviewTemplate = (customerReview) => `
-  <div class="customer-review-item">
-    <span tabindex="0" aria-label="${customerReview.name} memberikan review pada ${customerReview.date}.">${customerReview.name} - ${customerReview.date}</span>
-    <p tabindex="0" aria-label="pesan reviewnya adalah ${customerReview.review}.">${customerReview.review}</p>
+  <div class="customer-review-item" tabindex="0" aria-label="${customerReview.name} memberikan review pada ${customerReview.date}. Dan pesan reviewnya adalah ${customerReview.review}.">
+    <span>${customerReview.name} - ${customerReview.date}</span>
+    <p>${customerReview.review}</p>
   </div>
 `;
 
@@ -102,14 +102,14 @@ const createRestaurantFormReviewTemplate = () => `
 `;
 
 const createDrinkItemTemplate = (drink) => `
-  <span class="drink-item">
-    <a href="https://google.com/search?q=Minuman ${drink.name} adalah" target="_blank" rel=”noreferrer” aria-label="${drink.name}." title="Apa itu Minuman ${drink.name}?">${drink.name}</a>
+  <span class="drink-item" aria-label="${drink.name}.">
+    ${drink.name}
   </span>
 `;
 
 const createFoodItemTemplate = (food) => `
-  <span class="food-item">
-    <a href="https://google.com/search?q=Makanan ${food.name} adalah" target="_blank" rel=”noreferrer” aria-label="${food.name}." title="Apa itu Makanan ${food.name}?">${food.name}</a>
+  <span class="food-item" aria-label="${food.name}.">
+    ${food.name}
   </span>
 `;
 

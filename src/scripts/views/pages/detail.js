@@ -7,6 +7,7 @@ import CustomerReviewInitiator from '../../utils/customer-review-initiator';
 const Detail = {
   async render() {
     return `
+    <h2 class="section-title" tabindex="0" id="pageTitle">Detail Restaurant</h2>
     <div class="restaurant-detail"></div>
     <div id="customerReviewContainer"></div>
     <div id="favoriteButtonContainer"></div>
@@ -16,10 +17,9 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const { restaurant } = await RestaurantSource.restaurantDetail(url.id);
     const restaurantDetailElement = document.querySelector('.restaurant-detail');
-    const pageTitleElement = document.querySelector('#pageTitle');
+    const titlePage = document.getElementById('pageTitle');
 
     restaurantDetailElement.innerHTML = createRestaurantDetailTemplate(restaurant);
-    pageTitleElement.innerHTML = 'Restaurant Detail';
 
     FavoriteButtonInitiator.init({
       favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
@@ -30,6 +30,8 @@ const Detail = {
       customerReviewContainer: document.querySelector('.customer-reviews'),
       customerFormReviewContainer: document.querySelector('#customerReviewContainer'),
     });
+
+    titlePage.focus();
   },
 };
 

@@ -1,7 +1,7 @@
 import RestaurantSource from '../data/restaurant-source';
 import UrlParser from '../routes/url-parser';
-import { createCustomerReviewTemplate, createRestaurantFormReviewTemplate } from '../views/templates/template-creator';
 import DateHelper from './date-helper';
+import { createCustomerReviewTemplate, createRestaurantFormReviewTemplate } from '../views/templates/template-creator';
 
 const CustomerReviewInitiator = {
   init({ customerReviewContainer, customerFormReviewContainer }) {

@@ -242,20 +242,12 @@ header .brand-logo {
 
 .drink-item {
   background: black;
-}
-
-.drink-item a {
-  text-decoration: none;
   color: white;
 }
 
 
 .food-item {
   background: white;
-}
-
-.food-item a {
-  text-decoration: none;
   color: black;
 }
 
