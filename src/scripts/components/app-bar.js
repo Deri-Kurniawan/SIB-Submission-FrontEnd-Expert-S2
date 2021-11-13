@@ -5,7 +5,6 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <header>
     <h1 class="brand-logo" aria-label="brand logo DZRESTO" tabindex="0">DZRESTO</h1>
 
     <button type="button" id="menu-toggle" aria-label="drawer menu">
@@ -21,7 +20,6 @@ class AppBar extends HTMLElement {
         </li>
       </ul>
     </nav>
-    </header>
     `;
   }
 }
