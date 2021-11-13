@@ -5,13 +5,13 @@ const Favorite = {
   async render() {
     return `
       <h2 class="section-title" tabindex="0" id="pageTitle">Favorite Restaurant</h2>
-      <div class="restaurant-favorite"></div>
+      <div class="favorite-restaurant"></div>
     `;
   },
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getRestaurants();
-    const restaurantFavoriteElement = document.querySelector('.restaurant-favorite');
+    const restaurantFavoriteElement = document.querySelector('.favorite-restaurant');
 
     restaurants.forEach((restaurant) => {
       restaurantFavoriteElement.innerHTML += createRestaurantItemTemplate(restaurant);

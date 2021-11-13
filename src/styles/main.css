@@ -126,7 +126,7 @@ app-bar .brand-logo {
 */
 
 .restaurant-list,
-.restaurant-favorite {
+.favorite-restaurant {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
