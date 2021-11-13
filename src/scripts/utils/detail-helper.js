@@ -1,4 +1,8 @@
-import { createCustomerReviewTemplate, createDrinkItemTemplate, createFoodItemTemplate } from '../views/templates/template-creator';
+import {
+  createCustomerReviewTemplate,
+  createDrinkItemTemplate,
+  createFoodItemTemplate,
+} from '../views/templates/template-creator';
 
 const DetailHelper = {
   eachFoodsMenu({ foods }) {
