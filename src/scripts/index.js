@@ -5,6 +5,7 @@ import '../styles/responsive.css';
 
 import './components/app-bar';
 import './components/hero-image';
+import './components/error-message';
 import './components/skip-to-content';
 import './components/footer-copyright';
 
@@ -22,6 +23,7 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', () => {
+  // bisa tampilkan loader disini
   app.renderPage();
 });
 
