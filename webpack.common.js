@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -47,6 +48,24 @@ module.exports = {
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
+    new WebpackPwaManifest({
+      name: 'DZRESTO Exploler',
+      short_name: 'DZRESTO Exploler Lite',
+      description: 'Restaurant Exploler Application',
+      background_color: '#000',
+      crossorigin: 'use-credentials',
+      icons: [
+        {
+          src: path.resolve('src/public/images/favicon/brand-logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512],
+        },
+        {
+          src: path.resolve('src/public/images/favicon/brand-logo.png'),
+          size: '1024x1024',
+          purpose: 'maskable',
+        },
+      ],
     }),
   ],
 };
