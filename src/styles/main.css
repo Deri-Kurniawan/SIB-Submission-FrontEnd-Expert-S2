@@ -386,3 +386,15 @@ footer-copyright {
   background: rgb(0, 0, 255);
   color: #fff;
 }
+
+page-loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 35%;
+}
+
+.d-none {
+  display: none;
+}
