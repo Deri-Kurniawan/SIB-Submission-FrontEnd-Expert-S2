@@ -11,7 +11,7 @@ const FavoriteButtonInitiator = {
 
   async _renderButton() {
     const { id } = this._restaurant;
-    if (this._isRestaurantExist(id)) {
+    if (await this._isRestaurantExist(id)) {
       this._renderFavorited();
     } else {
       this._renderFavorite();
